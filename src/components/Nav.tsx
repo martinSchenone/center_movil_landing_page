@@ -1,9 +1,14 @@
 import { faHouse } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-export const Nav = ({ children }) => {
+import { ReactNode } from "react";
+interface Children {
+  children?:ReactNode
+}
+export const Nav = ({ children } : Children  ) => {
   const closeDrawers = () => {
     document.getElementById("my-drawer-3")?.click();
   };
+  
   return (
     <div className="drawer">
       <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
